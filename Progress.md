@@ -48,6 +48,7 @@
 - **Hydra:** A powerful online password-cracking tool.
   - `hydra -l [username] -P [bruteforce.txt] [targetIp] -t 4 ssh` (Example usage for SSH)
 - **Gobuster:** Web directory and file brute-forcing tool for web application enumeration.
+- **ffuf:** ffuf -w [wordlist-path] -u [target] -H "Host:[target-FUZZ(placeholder)]" -fw 6 -s
 
 ### To Learn:
 - **TFTP:** Trivial File Transfer Protocol
