@@ -14,7 +14,7 @@ fi
 CONNECTION_NAME="$1"
 
 # Change the DNS settings using nmcli
-echo "Changing DNS settings for $CONNECTION_NAME to use Google's public DNS..."
+echo "Changing DNS settings for '$CONNECTION_NAME' to use Google's public DNS..."
 if sudo nmcli connection modify "$CONNECTION_NAME" ipv4.dns "8.8.8.8 8.8.4.4"; then
     echo "Successfully updated DNS servers."
 else
@@ -40,7 +40,7 @@ else
 fi
 
 # Verify DNS configuration
-echo "Verifying new DNS settings for $CONNECTION_NAME..."
+echo "Verifying new DNS settings for '$CONNECTION_NAME'..."
 DNS_SETTINGS=$(nmcli device show | grep IP4.DNS)
 if echo "$DNS_SETTINGS" | grep -q "8.8.8.8"; then
     echo "DNS settings updated successfully:"
