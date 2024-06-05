@@ -16,6 +16,6 @@ sudo bash -c '
 wget https://github.com/DeogenesMaranan/LearningCyberSecurity/raw/main/change_dns.sh -O /usr/local/bin/change_dns.sh &&
 chmod +x /usr/local/bin/change_dns.sh &&
 CONNECTION_NAME=$(nmcli -t -f NAME connection show --active) &&
-/usr/local/bin/change_dns.sh "$CONNECTION_NAME"
+/usr/local/bin/change_dns.sh $CONNECTION_NAME
 '
 ```
